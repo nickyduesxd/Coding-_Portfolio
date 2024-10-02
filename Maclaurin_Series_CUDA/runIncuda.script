@@ -1,0 +1,11 @@
+#!/bin/sh
+##Resource REquest
+#SBATCH --job-name=zayfman
+#SBATCH --output=output.txt
+#SBATCH --time=1
+#SBATCH --partition="mids"
+#SBATCH --nodes=2
+#SBATCH --ntasks=40
+
+##Job Steps
+./Incuda 2 1.34534

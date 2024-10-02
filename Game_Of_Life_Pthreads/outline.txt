@@ -1,0 +1,46 @@
+Nicholas Zayfman 257050
+Project 1 : Parallel Game of Life
+
+pargol.c
+
+
+Initialize----------------------------------------------------------
+
+Add necessary libraries
+Define 3 structs for matrix and thread_info - as well as time for threads.
+Initialize global variables such as maxGen, displayFreq, numThreads,
+MAtrix, verbosity, done boolean, and num_at_barrier.
+Initialize p_barrier
+Initialize functions: readUserInput(), readFile(), print(), update(), haloUpdate()
+*thread_print, *thread_func.
+
+Arguments-----------------------------------------------------------
+
+Read number of Arguments is not equal to 5 then throw the following usage
+message ./pargol <maxNumGens> <displayFreq> <numThreads> <verbosity>\n
+
+Ask user for rows, columns, and seed then store those values inside the matrix.
+If rows = 0, then ask for file and read in file.
+
+Grid Initialization-------------------------------------------------
+
+Create an array of Matrices with arr of size cols+2 by rows + 2
+to account for the Halo and then using malloc then use random based on current 
+time to overwrite and give a random selection of 0 or 1 to the char for 
+values starting on the second column and ending at the 2nd to last column.
+
+Create another array where updated values will be set - same size as the original array.
+
+Grid Update---------------------------------------------------------
+
+Each Thread will be responsible for cols / numThreads plus a few extra.
+
+Inside the Thread we will run the update function from the lab.
+
+The main method will print the array. The threads will have to switch pointers
+which will use 2 barriers. A third barrier is going to used to sync 
+for the next generation as well as wait for the main thread to printif it has to.
+
+Free Resources------------------------------------------------------
+- Destroy Barrier
+- Free 2D Array

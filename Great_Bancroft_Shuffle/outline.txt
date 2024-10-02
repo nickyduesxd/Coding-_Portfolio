@@ -1,0 +1,74 @@
+NICHOLAS ZAYFMAN
+Collaboration: NONE
+
+HOW THE PROGRAM WORKS:
+
+Basically we have 4 parts for my program. 
+
+Part 1 is the initialization and 
+reading the input stream which we do by scanning the piped in file from
+stdin and storing the information in a linked list of nodes that store the name
+and company in a struct called Data.
+
+Part 2 is analyzing "company locality." Which is basically means we split up the 
+array list into equal parts given the average size of companies and see which company
+numbers show most frequently in each section and then calling "dibs" on that average
+for the company with the most people already located there. We do this by having
+2 arrays called locality which is of the type struct Company which stores the company number
+and the total amount of people in that company (since they all can have different sizes)
+and a relative array of ints. We then run through each company, and store the amount
+of "hits" in each section in the relative array then we find the section with the mosthits
+and swap the locality location of the company. We repeat until we looked at every company.
+
+Part 3 is the action swapping of people based on locality. The list of people is
+broken into two parts which we can name DONE and NOTDONE. DONE has the companies we have
+already grouped together and the company we are about to group together, NOTDONE has the 
+list of names we haven't grouped together. So we iterate after the last company we
+have "finished" grouping in DONE and look for people whose company numbers do not match
+the ones we have for that section in locality and we switch them with someone of the
+correct company in the NOTDONE list. We keep doing this until we reach the second to last company.
+
+Part 4 is in the main function where we free allocated memory since I had trouble with the large
+data sets and proper memory management.
+
+**Need to note that the program prints out the swaps in the swap function.
+
+ORIGIN OF THIS IDEA:
+
+I knew that to limit swaps I would need to analyze the data before initiating any 
+swaps because through probability, there will be more people grouped together than not
+in most cases so I wanted to limit the amount of "unnecessary swaps." So I looked
+at "locality" (fancy name I am using) in order to preassign a certain order when swapping.
+I assumed at first that each company would be the same size but I was mistaken so this
+algorithm performs best when company sizes are close.
+
+Runtime Analysis:
+
+I am going to use the 4 parts I divided my program to calculate this.
+Part 4 is big theta of n since I am iterating through the entire linked list in 
+order to free the memory.
+Part 1 is also big theta of n since I am iterating through stdin reading in each node.
+Part 2 is 3n + k(n+k) which simplifies to (3+k)n + k^2. The 3n comes from the first
+3 loops which I used to calculate values. The final for loop with a nested while and for
+loop produces k(n+k), the swap function is constant time since I don't need to iterate
+through the list or array. Which simplifies to big theta of (3+k)n + k^2.
+Part 3 has a for loop with a nested for loop and while loop which produces about
+big theta of (k-1)(n), I am assuming the for loop and while loop inside iterating through
+same list.
+
+Adding the values up we get a big theta of 4n + 2kn + k^2.
+
+Analysis of Number of Swaps:
+
+These are the amount of swaps I got for the test cases.
+5x100 11 swaps
+5x30 17 swaps
+30x4000 1610 swaps
+36x4000 3492 swaps
+It looks like k (number of companies) has a larger impact on number of swaps
+than size of dataset.
+
+I am not sure how to analyze the amount of swaps for my algorithm since it is more
+complicated and largely absed on the distribution of company members in the original Dataset.
+I can say that the number of swaps increase as company members are more evenly distributed
+across the list.
