@@ -1,0 +1,9 @@
+
+(1: Read in options.
+    - Print Matrix: True or False
+        - To stdout or text file
+            - read path to file
+    - Print Time
+    - Matrix Size
+    - Random Seet
+    
