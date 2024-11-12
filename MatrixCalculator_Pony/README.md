@@ -1,7 +1,7 @@
-## Chosen Problem: Matrix Calculator
+# Chosen Problem: Matrix Calculator
 
 Functionality: Addition, Subtraction, Multiplication, Scalar Multiplication, Determinant, Transpose, Adjoint (up to a 2 by 2 matrix).
-# Overview
+## Overview
 Ponylang is a parallel computing language where actors act concurrently. In our code, we have 2 actors, the main actor and the Node actor.
 We show concurrency in the addition, subtraction, multiplication, and scalar multiplication functionality where a Matrix is split into
 3 parts by rows and set to 3 different nodes to perform calculations then we print from each 3 nodes the result in order. We also
@@ -14,7 +14,7 @@ We are both very proud of the work we have done.
 
 We incorperated alot of error checking and usage statements.
 
-# Testing
+## Testing
 
 With the submitted material these are the tests we recommend you run to show the functionality of our code.
 
