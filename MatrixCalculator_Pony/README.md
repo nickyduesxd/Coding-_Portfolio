@@ -35,7 +35,7 @@ Subtracting 2 matrices:\
 Multiplying 2 matrices:\
 ./Phase2 mul matrix1.txt matrix2.txt\
 Scalar multiplying a matrix:\
-./Phase2 scalmul matrix1.txt 5\
+./Phase2 scalmul matrix1.txt 5
 
 Matrix files follow a specific format of row col then new line followed by values.
 
