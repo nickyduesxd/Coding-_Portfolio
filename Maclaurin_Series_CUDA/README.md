@@ -1,4 +1,4 @@
-#Parallelism with CUDA - Approximating Natural Logarithms using the Maclaurin Series
+# Parallelism with CUDA - Approximating Natural Logarithms using the Maclaurin Series
 
 Your task in this lab is to construct and run a parallel GPU program that calculate ln(y) using the Maclaurin Series using CUDA.
 

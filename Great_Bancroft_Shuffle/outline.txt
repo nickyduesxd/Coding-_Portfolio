@@ -69,6 +69,6 @@ It looks like k (number of companies) has a larger impact on number of swaps
 than size of dataset.
 
 I am not sure how to analyze the amount of swaps for my algorithm since it is more
-complicated and largely absed on the distribution of company members in the original Dataset.
+complicated and largely based on the distribution of company members in the original Dataset.
 I can say that the number of swaps increase as company members are more evenly distributed
 across the list.

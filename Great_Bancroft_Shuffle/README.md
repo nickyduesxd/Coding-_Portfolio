@@ -1,4 +1,4 @@
-#Overview
+# Overview
 
 We have a list of Midshipmen along with their company numbers, listed according to their current rooms in Bancroft Hall.
 
@@ -8,15 +8,9 @@ The swaps produced by your program must put all the Mids in the same company tog
 
 The goal is to accomplish this goal with the fewest number of swaps.
 
-#Requirements
+# Requirements
 
-The input to your program will come in the standard input stream (piped in). It will consist of n lines, and each line will have a company number, a single space, and then a name.
-
-(Note, the input comes from standard input; it is not a filename given on the command line.)
-
-You may assume that company numbers will always be between 1 and 100, and names will always consist of letters (no spaces) and have length at most 40. The number of names n will be at most 1 million.
-
-Despite the bounds just given, you should think of your target/typical input as having 36 companies and 4000 names. Other, larger, input sizes will be tested but you should focus on good performance on this input size.
+The input to your program will come in the standard input stream (piped in). It will consist of n lines, and each line will have a company number, a single space, and then a name. (Note, the input comes from standard input; it is not a filename given on the command line.) You may assume that company numbers will always be between 1 and 100, and names will always consist of letters (no spaces) and have length at most 40. The number of names n will be at most 1 million. Despite the bounds just given, you should think of your target/typical input as having 36 companies and 4000 names. Other, larger, input sizes will be tested but you should focus on good performance on this input size.
 
 Your program must run within 5 seconds on submit, which has the same specs as the machines in the Linux labs of Hopper Hall. If it takes longer than this, you might not get credit for that example.
 
@@ -24,6 +18,5 @@ Your program should write its output to the standard output stream. Each line of
 
 There will be many possible correct outputs for the same input. There is not just one right answer, but there are some answers that are better than others!
 
-#Notes
-
-There was a competition in class for most efficient algorithm. The first 2 were a greedy approach, this code was the 3rd.
+# Notes
+There was a competition in class for most efficient algorithm. The first 2 were a greedy approach, this code was the 3rd. The desired solution would have been a combination of greedy and this approach.

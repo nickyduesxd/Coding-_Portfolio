@@ -1,5 +1,3 @@
-Caleb Koutrakos, Nicholas Zayfman
-
 Problem: Matrix Calculator
 Functionality: Addition, Subtraction, Multiplication, Scalar Multiplication, Determinant, Transpose, Adjoint (up to a 2 by 2 matrix)
 
