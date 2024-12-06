@@ -1,0 +1,30 @@
+clear
+echo "the interesting stuff"
+echo "these are the 2 matrices we will use"
+echo ""
+filename="matrix1.txt"
+cat "$filename"
+echo " "
+echo ""
+filename="matrix2.txt"
+cat "$filename"
+echo ""
+echo ""
+echo "Lets add them"
+echo "./MatrixCalculator_Pony add matrix1.txt matrix2.txt"
+./MatrixCalculator_Pony add matrix1.txt matrix2.txt
+echo ""
+echo "Subtract them?"
+echo ""
+echo "./MatrixCalculator_Pony sub matrix1.txt matrix2.txt"
+./MatrixCalculator_Pony sub matrix1.txt matrix2.txt
+echo ""
+echo "Multiply them?"
+echo "./MatrixCalculator_Pony mul matrix1.txt matrix2.txt"
+./MatrixCalculator_Pony mul matrix1.txt matrix2.txt
+echo ""
+echo "Can we do scalar multiplication?"
+echo "./MatrixCalculator_Pony scalmul matrix1.txt 5"
+./MatrixCalculator_Pony scalmul matrix1.txt 5
+echo ""
+echo "Thats pretty much it"
